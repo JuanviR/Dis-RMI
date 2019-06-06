@@ -25,9 +25,7 @@ public class VenusFile {
                 while((leidos = lector.read(Integer.parseInt(venus.tam))) != null){
                     rnd.write(leidos);
                 }
-                System.out.println("hola");
                 rnd.seek(0);
-                System.out.println("hola1");
                 //escritor = venus.rec.upload(fileName,mode,ven.callback);
                 lector.close();
             }
