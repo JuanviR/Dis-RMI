@@ -27,6 +27,11 @@ public class ViceReaderImpl extends UnicastRemoteObject implements ViceReader {
             cerr.readLock().unlock();
             return null;
         }
+        else if(leido < tam){
+            byte [] leidos2 = new byte[leido];
+            for(int i=0;i<leido;i++) leidos2[i]=buf[i];
+            return leidos2;
+        }
         return buf;
     }
     public void close() throws RemoteException,IOException {
